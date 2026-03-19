@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo - 首頁</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b1020;
+        --card: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.72);
+        --link: #7dd3fc;
+        --border: rgba(255, 255, 255, 0.12);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f6f7fb;
+          --card: rgba(0, 0, 0, 0.04);
+          --text: rgba(0, 0, 0, 0.88);
+          --muted: rgba(0, 0, 0, 0.62);
+          --link: #0369a1;
+          --border: rgba(0, 0, 0, 0.12);
+        }
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+          "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+        background: radial-gradient(
+            1000px 600px at 20% 10%,
+            rgba(125, 211, 252, 0.18),
+            transparent 60%
+          ),
+          radial-gradient(
+            1000px 600px at 80% 0%,
+            rgba(167, 139, 250, 0.16),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 56px 20px;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: var(--card);
+        border-radius: 16px;
+        padding: 22px 20px;
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        font-size: 28px;
+        margin: 0 0 10px;
+        letter-spacing: 0.2px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>示範用專案結構與 GitHub 上傳流程</h1>
+        <p>
+          這是一個用來練習與示範的倉庫首頁，重點在於：整理專案檔案結構、撰寫 README，
+          並透過 Git / GitHub CLI 完成推送流程。
+        </p>
+
+        <div class="links" aria-label="快速連結">
+          <a class="pill" href="./Demo/README.md">查看 Demo 說明（README）</a>
+          <a class="pill" href="./Demo/">瀏覽 Demo 資料夾</a>
+          <a class="pill" href="./Demo/LICENSE">查看授權（LICENSE）</a>
+        </div>
+
+        <div class="muted">
+          提示：若你要用 GitHub Pages 顯示此首頁，請在 GitHub 倉庫設定中啟用 Pages，
+          並選擇從 <code>main</code> 分支部署。
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
